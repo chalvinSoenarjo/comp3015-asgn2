@@ -5,7 +5,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<?php include 'navbar.php';  ?>
 <?php
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $id = $_POST['id'];
     $json = file_get_contents('data/articles.json');

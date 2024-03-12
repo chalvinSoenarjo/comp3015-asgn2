@@ -1,6 +1,12 @@
 <?php
 include 'navbar.php';
 
+// Check if the user is logged in, if not then redirect to login page
+if(!isset($_SESSION["user_id"])){
+    header("location: login.php");
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
     $link = $_POST['link'];
@@ -19,7 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $id = time(); // Generate ID
-    $article = ['id' => $id, 'title' => $title, 'link' => $link];
+    $userId = $_SESSION['user_id']; // Get the user ID from the session
+    $username = $_SESSION['username']; // Get the username from the session
+    $createdAt = date('l jS \of F Y, h:i A'); // Get the current date and time
+    $article = ['id' => $id, 'title' => $title, 'link' => $link, 'userId' => $userId, 'username' => $username, 'createdAt' => $createdAt];
     $articles[] = $article;
 
     $success = file_put_contents('data/articles.json', json_encode($articles));

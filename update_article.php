@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['title']
     // Update the article with new values
     $articles[$articleIndex]['title'] = $title;
     $articles[$articleIndex]['link'] = $link;
+    $articles[$articleIndex]['updatedAt'] = date('l jS \of F Y, h:i A'); // Add the update date and time
 
     // Save updated articles to JSON file
     $success = file_put_contents('data/articles.json', json_encode($articles));

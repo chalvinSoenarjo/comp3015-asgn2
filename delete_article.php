@@ -1,4 +1,21 @@
 <?php
+
+
+// Start the session
+session_start();
+
+// Assuming you have a function to get an article by its ID
+$article = get_article_by_id($_GET['id']);
+
+// Check if the user is logged in and is the author of the article
+if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] !== $article['userId']) {
+    // The user is not logged in or is not the author of the article
+    header("Location: access_denied.php");
+    exit;
+}
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $id = $_POST['id'];
 

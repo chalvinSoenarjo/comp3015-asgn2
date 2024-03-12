@@ -48,7 +48,11 @@ if ($success === false) {
         <?php foreach ($articles as $article): ?>
             <li>
                 <h2><?= $article['title'] ?></h2>
-                <p>ID: <?= $article['id'] ?></p> <!-- Display ID here -->
+                <p>Article ID: <?= $article['id'] ?></p> <!-- Display ID here -->
+                <p>Created at <?= $article['createdAt'] ?> <br> Userid: <?= $article['userId'] ?> <br> Posted by <?= $article['username'] ?></p><br><br>
+                <?php if (isset($article['updatedAt'])): ?>
+                    <p>Updated at <?= $article['updatedAt'] ?></p>
+                <?php endif; ?>
                 <a href="<?= $article['link'] ?>" target="_blank"><?= $article['link'] ?></a>
                 <div class="article-actions">
                     <form action="edit_article.php" method="post">

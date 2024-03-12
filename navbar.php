@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 // Define the default profile picture
-$defaultProfilePic = 'cat.jpg'; // Update this path to your actual default cat image
+$defaultProfilePic = 'images/cat.jpg'; // Update this path to your actual default cat image
 $userProfilePic = isset($_SESSION['profile_pic']) && file_exists($_SESSION['profile_pic']) ? $_SESSION['profile_pic'] : $defaultProfilePic;
 ?>
 <style>
