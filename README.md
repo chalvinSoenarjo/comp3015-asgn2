@@ -9,7 +9,7 @@ Configuration: The application relies on a data/articles.json file to store arti
 
 Running the Application: Navigate to the project directory in your terminal.
 Start a PHP server:
-Copy code php '-S localhost:8000'
+Copy code 'php -S localhost:8000'
 
 Open your web browser and go to http://localhost:8000/index.php to access the application.
 Usage:

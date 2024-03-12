@@ -1,4 +1,3 @@
-
 <?php
 // Start the session
 session_start();
@@ -43,10 +42,10 @@ $userProfilePic = isset($_SESSION['profile_pic']) && file_exists($_SESSION['prof
             <a href="submit_article.php">Submit Article</a>
             <a href="profile_settings.php">Profile Settings</a>
             <a href="logout.php">Logout</a>
+            <!-- Make profile picture clickable -->
+            <a href="profile_settings.php">
+                <img src="<?php echo htmlspecialchars($userProfilePic); ?>" alt="Profile Picture" class="navbar-profile-pic">
+            </a>
         <?php endif; ?>
     </div>
-   <!-- Make profile picture clickable -->
-<a href="profile_settings.php">
-    <img src="<?php echo htmlspecialchars($userProfilePic); ?>" alt="Profile Picture" class="navbar-profile-pic" style="float: right;">
-</a>
 </div>

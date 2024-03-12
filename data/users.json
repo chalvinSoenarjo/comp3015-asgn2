@@ -23,5 +23,11 @@
         "name": "adam",
         "email": "adam@gmail.com",
         "password": "$2y$12$vjf5fH8F8WPUNptky765buw9iDQBwXQlyP3GD.FY.M5dELBsnGrPS"
+    },
+    {
+        "id": "65f00a6e58f62",
+        "name": "leonard leeroy",
+        "email": "leonard@gmail.com",
+        "password": "$2y$12$r8Lpru0W85V\/bYL12ZNYb.ozvsgz\/3A50r9bqclisoP3stzo8.iom"
     }
 ]

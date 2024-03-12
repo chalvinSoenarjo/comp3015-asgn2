@@ -64,8 +64,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Hash the password
         $hashed_password = password_hash($password, PASSWORD_BCRYPT, ['cost' => 12]);
 
+        // Generate a unique ID for the user
+        $user_id = uniqid();
+
         // Add user data to the JSON file
-        $user_data = array('name' => $name, 'email' => $email, 'password' => $hashed_password);
+        $user_data = array('id' => $user_id, 'name' => $name, 'email' => $email, 'password' => $hashed_password);
         $users = read_users_from_json();
         $users[] = $user_data;
         write_users_to_json($users);
