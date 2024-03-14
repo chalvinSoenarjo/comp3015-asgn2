@@ -1,18 +1,20 @@
-[
-    {
-        "id": 1710244262,
-        "title": " yahoo",
-        "link": "https:\/\/ca.yahoo.com\/?p=us",
+{
+    "2": {
+        "id": 1710382194,
+        "title": "google (edited by guest)",
+        "link": "https:\/\/www.google.com\/",
         "userId": "65f00a6e58f62",
         "username": "leonard leeroy",
-        "createdAt": "Tuesday 12th of March 2024, 11:51 AM"
+        "createdAt": "Thursday 14th of March 2024, 02:09 AM",
+        "updatedAt": "Thursday 14th of March 2024, 02:11 AM"
     },
-    {
-        "id": 1710244277,
-        "title": "bing",
+    "3": {
+        "id": 1710382444,
+        "title": "bing (edited by james)",
         "link": "https:\/\/www.bing.com\/?toWww=1&redig=0AA34622FE6C447D98A6F554F3D640BE",
-        "userId": "65f00a6e58f62",
-        "username": "leonard leeroy",
-        "createdAt": "Tuesday 12th of March 2024, 11:51 AM"
+        "userId": "65f25d3eca0ac",
+        "username": "james roy",
+        "createdAt": "Thursday 14th of March 2024, 02:14 AM",
+        "updatedAt": "Thursday 14th of March 2024, 02:14 AM"
     }
-]
+}
